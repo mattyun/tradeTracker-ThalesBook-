@@ -1,0 +1,25 @@
+//
+   Created by matthewyun on 4/27/16.
+extends layout
+block content
+    .container
+
+            .col-sm-6
+            h1 Log in
+            if message.length > 0
+                .alert #{message}
+
+            form(action = '/login' method = 'post')
+                .form-group
+                    label Email
+                    input(type = 'text' class = 'form-control' name = 'email')
+                    label Password
+                    input(type = 'password' class = 'form-control' name = 'password')
+                button(type = 'submit' class = 'btn btn-warning btn-lg') Login
+            hr
+
+            p
+                | Need an Account?
+                a(href='/signup')  Signup
+
+

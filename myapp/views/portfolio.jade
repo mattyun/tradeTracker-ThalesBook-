@@ -1,0 +1,70 @@
+//
+   Created by matthewyun on 4/28/16.
+
+extends layoutPrt
+block content
+    #prt
+        h1 My Portfolio
+
+    #portfolio
+
+
+    script(id = "portfolioTemplate" type = "text/template").
+        <table>
+            <tr>
+                <th> Name </th>
+                <th> Symbol </th>
+                <th> Date Bought </th>
+                <th> Price Bought </th>
+                <th> Price Current </th>
+                <th> Price Target </th>
+                <th> Outlook</th>
+                <th> Impact (%)</th>
+                <th> Target Date </th>
+                <th> Price At Target </th>
+                <th> Notes </th>
+                <th> Result </th>
+            </tr>
+
+            <tr>
+                <td>
+                    <div class = "name" ><%= Name %> </div>
+                </td>
+                <td>
+                    <div class= "symbol"><%= Symbol %></div>
+                </td>
+                <td>
+                    <div class = "date"><%= CurrentDate%> </div>
+                </td>
+                <td>
+                    <div class = "price"><%= LastPrice%> </div>
+                </td>
+                <td>
+                    <div class = "priceCurr"><%= CurrentPrice%> </div>
+                </td>
+                <td>
+                    <div class = "priceCurr"><%= TargetPrice%> </div>
+                </td>
+                <td>
+                    <div class = "outlook"><%= Outlook%> </div>
+                </td>
+                <td>
+                    <div class = "impact"><%= Impact%></div>
+                </td>
+                <td>
+                    <div class = "date"><%= Date%> </div>
+                </td>
+                <td>
+                    <div class = "priceAtTarget"><%= PriceAtTarget%> </div>
+                </td>
+                <td>
+                    <div class = "notes"><%= Notes%></div>
+                </td>
+                <td>
+                    <div class = "result" class = "resultClass" > <%= Result%></div>
+                </td>
+                <td>
+                    <button class = "deletePosition" id = <%=_id%> rows="4" cols="50">Delete</button>
+                </td>
+            </tr>
+        </table>

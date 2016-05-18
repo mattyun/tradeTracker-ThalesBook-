@@ -1,0 +1,52 @@
+//
+   Created by matthewyun on 5/4/16.
+
+doctype html
+html
+    head
+        title= title
+        //for login from tutorial
+        link(rel='stylesheet', href='//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css')
+        link(rel='stylesheet', href='//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css')
+        link(rel='stylesheet', href='/stylesheets/style.css')
+        link(rel='stylesheet', href='/stylesheets/jquery-ui.theme.min.css')
+        link(rel='stylesheet', href='/stylesheets/jquery-ui.structure.min.css')
+        link(rel='stylesheet', href='/stylesheets/jquery-ui.min.css')
+    body
+        #head
+            h1 TradeTracker
+            #headerRight
+                #navBox
+                    a(href = '/selection' id = 'linkSelection') Add Trades
+                    .divider |
+                    a(href = '/portfolio' id = 'linkPortfolio') Portfolio
+                    .divider |
+                    a(href = '/about' id = 'linkAbout') About
+                    .divider |
+                    a(href = '/logout' id = 'linkLogout') Log out
+
+        block content
+        #footer
+            .footerLeft
+                a(href = '#' id = 'linkAbout') About
+                a(href = '/portfolio' id = 'linkPortfolio') Portfolio
+                a(href = '/selection' id = 'linkSelection') Add Trades
+            .footerRight TradeTracker © 2016
+        script(src='http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js')
+        //script(src='/javascripts/global.j4s')
+        script(src = '/javascripts/libraries/underscore-min.js')
+        script(src = '/javascripts/libraries/backbone-min.js')
+        script(src = '/javascripts/libraries/backbone.localStorage.js')
+        script(src = '/javascripts/libraries/jquery-dateFormat-1.0.js')
+        script(src = '/javascripts/libraries/jquery-ui.min.js')
+        //script(src = '/javascripts/libraries/jquery-ui.min.css')
+        script(src = '/javascripts/models/stockModel.js')
+        script(src = '/javascripts/models/positionModel.js')
+        script(src = '/javascripts/collections/stockCollection.js')
+        script(src = '/javascripts/collections/positionCollection.js')
+        script(src = '/javascripts/views/mainView.js')
+        script(src = '/javascripts/views/quoteView.js')
+        script(src = '/javascripts/views/portfolioView.js')
+        script(src = '/javascripts/views/holdingView.js')
+        script(src = '/javascripts/appPrt.js')
+        script(src = '/javascripts/global.js')

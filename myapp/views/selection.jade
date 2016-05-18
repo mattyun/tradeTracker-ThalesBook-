@@ -1,0 +1,63 @@
+//
+   Created by matthewyun on 4/29/16.
+
+extends layout
+block content
+    #title
+        //img(src = '/images/sgTitle.png')
+    #selection.container
+        h1 Add new stock
+        p Look up and add new stock
+        #getQuote
+            fieldset
+                input#Stock(type='text', placeholder="Symbol e.g. 'AAPL'")
+                button#btnGetQuote Get Quote
+        //script(id = "quoteTemplate" type = "text/template").
+        //    <div id = "name">  <%= Name %> </div>
+        //    <div id = "symbol">  "<%= Symbol %>" </div>
+        //    <div id = "price">  "<%= LastPrice%>" </div>
+
+        script(id = "quoteTemplate" type = "text/template").
+            <table id = "stockTable">
+                <tr>
+                    <th> Name </th>
+                    <th> Symbol </th>
+                    <th> Price </th>
+                    <th> Outlook </th>
+                    <th> Impact (%) </th>
+                    <th> Target Date </th>
+                    <th> Notes </th>
+                </tr>
+                <tr>
+
+                    <td>
+                        <div id = "name" class = "details"><%= Name %></div>
+                    </td>
+                    <td>
+                        <div id = "symbol" class = "details"><%= Symbol %></div>
+                    </td>
+                    <td>
+                        <div id = "price" class = "details"><%= LastPrice%></div>
+                    </td>
+
+                    <td>
+
+                            <input id="Bear" class = "outlook input"  type="radio" name="answers" /><label for="Bear">  Bear  </label></br>
+                            <input id="Bull" class = "outlook input"  type="radio" name="answers"/><label for="Bull">  Bull  </label>
+
+                    </td>
+                    <td>
+                        <input id="impact" type="text" class = 'input numberData' placeholder = 'OPTIONAL'>
+                    </td>
+                    <td>
+                        <p>Date: <input type="text" id="date" class = 'input otherData'></p>
+                    </td>
+                    <td>
+                        <textarea id = "notes" rows="4" cols="50" class = 'input otherData'></textarea>
+                    </td>
+
+                    <td>
+                        <button id = "saveStock" rows="4" cols="50">Add</button>
+                    </td>
+                </tr>
+            </table>

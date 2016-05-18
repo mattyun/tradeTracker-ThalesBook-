@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+</head>
+<body>
+<script id = "testTemplate" type = "text/template">
+    <div id="books">
+        <form id="addBook" action="#">
+            <div class = "question"> <%= question %> </div>
+            <div>
+                <input id="answerOne" type="checkbox" /><label for="answerOne"><%= answerOne %> </label>
+                <input id="answerTwo" type="checkbox" /><label for="answerTwo"><%= answerTwo %> </label>
+                <input id="answerThree" type="checkbox" /><label for="answerThree"><%= answerThree %> </label>
+                <input id="answerFour" type="checkbox" /><label for="answerFour"><%= answerFour %> </label>
+                <button id="add">Submit</button>
+            </div>
+        </form>
+    </div>
+</script>
+
+<script id="template" type="text/template">
+    <img src="<%= coverImage %>"/>
+    <ul>
+        <li><%= question %></li>
+        <li><%= answerOne %></li>
+        <li><%= answerTwo %></li>
+        <li><%= answerThree %></li>
+        <li><%= answerFour %></li>
+
+    </ul>
+
+    <button class="delete">Delete</button>
+
+
+
+</script>
+
+
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
+<script src='javascripts/libraries/underscore-min.js'></script>
+<script src='javascripts/libraries/backbone-min.js'></script>
+<script src='javascripts/libraries/backbone.localStorage.js'></script>
+<script src='javascripts/libraries/jquery-dateFormat-1.0.js'></script>
+<script src='javascripts/libraries/jquery-ui-1.10.0.custom.js'></script>
+<script src='javascripts/models/bookModel.js'></script>
+<script src='javascripts/collections/libraryCollection.js'></script>
+<script src='javascripts/views/bookView.js'></script>
+<script src='javascripts/views/libraryView.js'></script>
+<script src='javascripts/app.js'></script>
+<!--<script src='myapp/public/javascripts/views/app.js'></script>-->
+<!--<script src='myapp/public/javascripts/routers/router.js'></script>-->
+
+<!--<script src='myapp/public/javascripts/global.js'></script>-->
+
+
+
+</body>
+</html>

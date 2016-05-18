@@ -1,0 +1,57 @@
+//
+   Created by matthewyun on 4/27/16.
+extends layout
+block content
+
+    // not in use
+
+    #title
+        //img(src = '/images/sgTitle.png')
+    #wrapper
+        h1 Stock Trek
+        p Go Long and Prosper
+
+        #getQuote
+            fieldset
+                input#Stock(type='text', placeholder="Symbol e.g. 'AAPL'")
+                button#btnGetQuote Get Quote
+
+        script(id = "quoteTemplate" type = "text/template").
+            <table>
+                <tr>
+                    <th> Name </th>
+                    <th> Symbol </th>
+                    <th> Price </th>
+                    <th> Bull/Bear </th>
+                    <th> Target Date </th>
+                    <th> Notes </th>
+                </tr>
+                <tr>
+                    <div id = "stockDetailsGroup">
+                        <td>
+                            <div id = "name">  <%= Name %> </div>
+                        </td>
+                        <td>
+                            <div id = "symbol">  "<%= Symbol %>" </div>
+                        </td>
+                        <td>
+                            <div id = "price">  "<%= LastPrice%>" </div>
+                        </td>
+                    </div>
+                    <div = "userSelectionGroup">
+                        <td>
+                            <input id="Bear" type="radio" name="answers" /><label for="Bear"> Bear  </label></br>
+                            <input id="Bull" type="radio" name="answers"/><label for="Bull"> Bull  </label>
+                        </td>
+                        <td>
+                            <p>Date: <input type="text" id="datepicker"></p>
+                        </td>
+                        <td>
+                            <textarea id = "notes" rows="4" cols="50"></textarea>
+                        </td>
+                    </div>
+                    <td>
+                        <button id = "saveStock" rows="4" cols="50">Save</button>
+                    </td>
+                </tr>
+            </table>
