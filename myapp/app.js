@@ -70,7 +70,7 @@ require('./routes/routes.js')(app, passport); // load our routes and pass in our
 app.use( express.static( path.join( application_root, 'public') ) );
 
 // *******************  Start server *******************
-var port = 3333;
+var port = 4444;
 app.listen( port, function() {
     console.log( 'Express server listening on port %d in %s mode', port, app.settings.env );
 });
